@@ -1,0 +1,10 @@
+setup.py
+logger_telegram_v/__init__.py
+logger_telegram_v/logger.py
+logger_telegram_v/logger_handler.py
+logger_telegram_v/telegram_logger.py
+logger_telegram_v.egg-info/PKG-INFO
+logger_telegram_v.egg-info/SOURCES.txt
+logger_telegram_v.egg-info/dependency_links.txt
+logger_telegram_v.egg-info/requires.txt
+logger_telegram_v.egg-info/top_level.txt
