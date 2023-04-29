@@ -13,7 +13,7 @@ To use logger-telegram-v, you need to first create a Telegram bot and get the bo
 Once you have the bot token, you can use the telegram_logger decorator to decorate your functions:
 
 ```python
-from logger_telegram_v import telegram_logger
+from logger_telegram_v.telegram_logger import telegram_logger
 
 @telegram_logger(token='YOUR_BOT_TOKEN', chat_ids=[CHAT_ID])
 def my_function():
