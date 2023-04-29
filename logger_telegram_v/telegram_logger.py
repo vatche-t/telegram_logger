@@ -2,7 +2,7 @@ from loguru import logger
 import telegram
 from functools import wraps
 
-def telegram_logger(token, chat_ids):
+def telegram_logger(token, chat_ids, level=None):
     def decorator(func):
         bot = telegram.Bot(token=token)
 
@@ -10,7 +10,10 @@ def telegram_logger(token, chat_ids):
         def wrapper(*args, **kwargs):
             try:
                 result = func(*args, **kwargs)
-                logger.info(result)
+                if level:
+                    logger.log(level, result)
+                else:
+                    logger.info(result)
                 for chat_id in chat_ids:
                     bot.send_message(chat_id=chat_id, text=str(result))
                 return result
